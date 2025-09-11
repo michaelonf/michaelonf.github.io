@@ -1,8 +1,9 @@
 /* ===== Theme ===== */
 :root {
-  --text: #3a3a3a;
-  --muted: #6f6f6f;
-  --accent: #25572a; /* deep green */
+  --text: #000000;       /* black for body text */
+  --muted: #4d4d4d;      /* secondary grey */
+  --name: #003d06;       /* dark green for h1/h2 */
+  --accent: #81a969;     /* light green for links/nav */
 }
 
 /* ===== Base ===== */
@@ -20,9 +21,9 @@ body {
 }
 
 .container {
-  max-width: 760px;
-  margin: 64px auto;
-  padding: 0 24px;
+  max-width: 880px;       /* wider layout */
+  margin: 72px auto;      /* more top/bottom breathing room */
+  padding: 0 32px;        /* wider side margins */
 }
 
 /* ===== Header (image + name + nav) ===== */
@@ -30,7 +31,7 @@ body {
   display: flex;
   align-items: flex-start;
   gap: 24px;
-  margin-bottom: 8px;
+  margin-bottom: 24px;    /* more space below header */
 }
 
 .profile-pic {
@@ -46,9 +47,23 @@ body {
 
 h1 {
   margin: 0 0 6px 0;
-  font-size: 32px;       /* larger */
-  font-weight: 700;      /* bold */
+  font-size: 32px;
+  font-weight: 700;
   letter-spacing: 0.3px;
+  color: var(--name);
+}
+
+/* Start main text lower than header */
+main {
+  padding-top: 12px;      /* pushes body copy down below image/title/nav */
+}
+
+/* ===== Section headings ===== */
+h2 {
+  margin: 0 0 12px 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--name);
 }
 
 /* ===== Navigation ===== */
@@ -64,7 +79,7 @@ h1 {
   text-decoration: none;
   border-bottom: 1px solid transparent;
   font-weight: bold;
-  margin: 0 6px;  /* spacing around links */
+  margin: 0 6px;
 }
 
 .topnav a:first-child { margin-left: 0; }
@@ -74,10 +89,11 @@ h1 {
 /* ===== Body text ===== */
 p {
   margin: 0 0 16px 0;
-  max-width: 68ch;
+  max-width: 72ch;
+  color: var(--text);
 }
 p + p {
-  color: var(--muted);
+  color: var(--muted); /* optional secondary tone for subsequent paragraphs */
 }
 
 a {
