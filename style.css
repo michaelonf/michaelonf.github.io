@@ -21,9 +21,9 @@ body {
 }
 
 .container {
-  max-width: 880px;       /* wider layout */
-  margin: 72px auto;      /* more top/bottom breathing room */
-  padding: 0 32px;        /* wider side margins */
+  max-width: 1080px;     /* wider layout for research text */
+  margin: 72px auto;     
+  padding: 0 48px;       /* bigger side margins */
 }
 
 /* ===== Header (image + name + nav) ===== */
@@ -31,7 +31,7 @@ body {
   display: flex;
   align-items: flex-start;
   gap: 24px;
-  margin-bottom: 28px;    /* more space below header */
+  margin-bottom: 28px;   
 }
 
 .profile-pic {
@@ -55,7 +55,7 @@ h1 {
 
 /* ===== Section headings ===== */
 h2 {
-  margin: 0 0 12px 0;
+  margin: 32px 0 12px 0;
   font-size: 22px;
   font-weight: 700;
   color: var(--name);
@@ -84,8 +84,9 @@ h2 {
 /* ===== Body text ===== */
 p {
   margin: 0 0 16px 0;
-  max-width: 72ch;
   color: var(--text);
+  line-height: 1.8;
+  /* removed max-width so text flows naturally */
 }
 
 a {
@@ -102,7 +103,7 @@ a:hover {
 hr {
   border: none;
   border-top: 1px dotted var(--divider);
-  margin: 24px 0;
+  margin: 32px 0;
 }
 
 /* ===== Footer ===== */
@@ -113,6 +114,9 @@ hr {
 
 /* ===== Responsive ===== */
 @media (max-width: 640px) {
+  .container {
+    padding: 0 24px; /* narrower margins on mobile */
+  }
   .masthead {
     flex-direction: column;
     align-items: center;
