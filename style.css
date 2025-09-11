@@ -1,7 +1,7 @@
 /* ===== Theme ===== */
 :root {
   --text: #000000;       /* black for body text */
-  --muted: #4d4d4d;      /* secondary grey */
+  --muted: #000000;      /* black for secondary text */
   --name: #003d06;       /* dark green for h1/h2 */
   --accent: #81a969;     /* light green for links/nav */
 }
