@@ -1,0 +1,94 @@
+/* === Base === */
+:root {
+  --text: #3a3a3a;
+  --muted: #6f6f6f;
+  --accent: #2aa198;     /* soft teal/green like the example */
+}
+
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  line-height: 1.8;
+  color: var(--text);
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* === Layout === */
+.container {
+  max-width: 760px;
+  margin: 64px auto;
+  padding: 0 24px;
+}
+
+/* Clear floats from the header block */
+.container::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* === Header block (photo + name + nav) === */
+.profile-pic {
+  width: 110px;
+  height: auto;
+  border-radius: 10px;            /* rounded corners like the screenshot */
+  float: left;
+  margin: 0 24px 16px 0;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 6px 0;
+  letter-spacing: 0.2px;
+}
+
+/* The nav paragraph right after the h1 */
+h1 + p {
+  margin: 0 0 28px 0;
+  color: var(--accent);
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+/* === Links === */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+a:hover,
+a:focus {
+  border-bottom-color: currentColor;
+}
+
+/* === Body text === */
+p {
+  margin: 0 0 16px 0;
+  max-width: 68ch;                /* comfortable reading width */
+  color: var(--text);
+}
+
+p + p {
+  color: var(--muted);            /* slightly muted tone like the example */
+}
+
+/* === Small screens === */
+@media (max-width: 640px) {
+  .profile-pic {
+    float: none;
+    display: block;
+    margin: 0 auto 16px auto;
+  }
+  h1, h1 + p {
+    text-align: center;
+  }
+  h1 + p { white-space: normal; }
+}
