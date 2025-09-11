@@ -2,7 +2,7 @@
 :root{
   --text: #3a3a3a;
   --muted: #6f6f6f;
-  --accent: #2aa198; /* soft teal like the reference */
+  --accent: #25572a; /* deep green */
 }
 
 /* ===== Base ===== */
@@ -13,7 +13,7 @@ body{
   margin:0;
   background:#fff;
   color:var(--text);
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-family: "Courier New", Courier, ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
   line-height:1.8;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -70,7 +70,11 @@ h1{
 p{ margin:0 0 16px 0; max-width:68ch; }
 p + p{ color:var(--muted); }
 
-a{ color:var(--accent); text-decoration:none; border-bottom:1px solid transparent; }
+a{
+  color:var(--accent);
+  text-decoration:none;
+  border-bottom:1px solid transparent;
+}
 a:hover{ border-bottom-color: currentColor; }
 
 /* ===== Footer ===== */
