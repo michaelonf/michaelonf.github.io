@@ -1,9 +1,9 @@
 /* ===== Theme ===== */
 :root {
-  --text: #000000;       /* black for body text */
-  --muted: #000000;      /* black for secondary text */
+  --text: #000000;       /* black for all body text */
   --name: #003d06;       /* dark green for h1/h2 */
-  --accent: #81a969;     /* light green for links/nav */
+  --accent: #81a969;     /* lighter green for links/nav */
+  --divider: #def2ca;    /* pale green dotted line */
 }
 
 /* ===== Base ===== */
@@ -31,7 +31,7 @@ body {
   display: flex;
   align-items: flex-start;
   gap: 24px;
-  margin-bottom: 24px;    /* more space below header */
+  margin-bottom: 28px;    /* more space below header */
 }
 
 .profile-pic {
@@ -51,11 +51,6 @@ h1 {
   font-weight: 700;
   letter-spacing: 0.3px;
   color: var(--name);
-}
-
-/* Start main text lower than header */
-main {
-  padding-top: 12px;      /* pushes body copy down below image/title/nav */
 }
 
 /* ===== Section headings ===== */
@@ -92,9 +87,6 @@ p {
   max-width: 72ch;
   color: var(--text);
 }
-p + p {
-  color: var(--muted); /* optional secondary tone for subsequent paragraphs */
-}
 
 a {
   color: var(--accent);
@@ -106,10 +98,17 @@ a:hover {
   border-bottom-color: currentColor;
 }
 
+/* ===== Divider ===== */
+hr {
+  border: none;
+  border-top: 1px dotted var(--divider);
+  margin: 24px 0;
+}
+
 /* ===== Footer ===== */
 .footer {
   margin-top: 32px;
-  color: var(--muted);
+  color: var(--text);
 }
 
 /* ===== Responsive ===== */
