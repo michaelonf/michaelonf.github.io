@@ -1,34 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Michael O'Neill</title>
-  <meta name="description" content="Michael O'Neill - PhD student at UCD researching nutrition and sustainable diets.">
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <meta name="description" content="Michael O'Neill — PhD student at UCD researching nutrition and sustainable diets." />
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
-    <img src="mon_github.jpg" alt="Michael O'Neill profile picture" class="profile-pic">
 
-    <h1>Michael O'Neill</h1>
-    <p>
-      <a href="index.html">Home</a> |
-      <a href="research.html">Research</a> |
-      <a href="more.html">More</a>
-    </p>
+    <!-- Header -->
+    <header class="masthead">
+      <img src="mon_github.jpg" alt="Michael O'Neill profile picture" class="profile-pic" />
+      <div class="masthead-text">
+        <h1>Michael O'Neill</h1>
+        <nav class="topnav">
+          <a href="index.html">Home</a>
+          <span class="sep">|</span>
+          <a href="research.html">Research</a>
+          <span class="sep">|</span>
+          <a href="more.html">More</a>
+        </nav>
+      </div>
+    </header>
 
-    <p>Hi. I'm Michael.</p>
-    <p>
-      I am a PhD student on the Co-Centre for Sustainable Food Systems project at University College Dublin. 
-      My research focuses on nutrition and sustainability. I am particularly interested in healthy diets from sustainable sources, 
-      and understanding what we can do to improve nutritional sustainability at a population level. I like working with data!
-    </p>
+    <!-- Main content -->
+    <main>
+      <p>Hi. I'm Michael.</p>
 
-    <p>
-      Previously, I worked as a Research Assistant on the UCD PLAN'EAT Living Lab team, and I hold a BSc in Food Innovation from Technological University Dublin.
-    </p>
+      <p>
+        I am a PhD student on the Co-Centre for Sustainable Food Systems project at
+        University College Dublin. My research focuses on nutrition and sustainability.
+        I am particularly interested in healthy diets from sustainable sources, and
+        understanding what we can do to improve nutritional sustainability at a
+        population level. I like working with data!
+      </p>
 
-    <p>
-      Find me on 
-      <a href="https://www.linkedin.com/in/michael-o-
+      <p>
+        Previously, I worked as a Research Assistant on the UCD PLAN'EAT Living Lab team,
+        and I hold a BSc in Food Innovation from Technological University Dublin.
+      </p>
+
+      <p>
+        Find me on
+        <a class="ext" href="https://www.linkedin.com/in/michael-o-neill-/" target="_blank" rel="noopener">LinkedIn</a>,
+        <a class="ext" href="https://www.researchgate.net/profile/Michael-Oneill-28" target="_blank" rel="noopener">ResearchGate</a>,
+        or <a class="ext" href="mailto:michael.oneill4@ucdconnect.ie">Email</a>.
+      </p>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <small>Copyright © <span id="year"></span> Michael O'Neill</small>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
